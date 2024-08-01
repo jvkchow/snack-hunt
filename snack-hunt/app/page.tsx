@@ -1,5 +1,5 @@
-import { redirect } from "next/navigation";
 import { Button } from "@nextui-org/react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -7,34 +7,22 @@ export default function Home() {
       <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
 
         <div>
-          <Button className="bg-white text-black font-semibold text-lg">Sign In</Button>
-          <p className="py-4 m-0 max-w-[13ch] text-sm opacity-50">
+          <Link href="/sign-in">
+            <Button className="bg-white text-black font-semibold text-lg w-40">Sign In</Button>
+          </Link>
+          <p className="py-4 m-0 max-w-40 text-sm opacity-50">
             Already have an account? Click here.
           </p>
         </div>
 
         <div>
-          <Button className="bg-white text-black font-semibold text-lg">Sign Up</Button>
-          <p className="py-4 m-0 max-w-[13ch] text-sm opacity-50">
+          <Link href="/sign-up">
+            <Button className="bg-white text-black font-semibold text-lg w-40">Sign Up</Button>
+          </Link>
+          <p className="py-4 m-0 max-w-40 text-sm opacity-50">
             Don't have an account? Click here.
           </p>
         </div>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        </a>
       </div>
     </main>
   );
