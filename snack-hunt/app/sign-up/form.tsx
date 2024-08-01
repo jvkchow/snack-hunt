@@ -4,9 +4,12 @@ import {
     Input
 } from "@nextui-org/react";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export const SignupForm = () => {
     
+    const router = useRouter();
+
     const [inputs, setInputs] = useState({
         username: "",
         email: "",
@@ -14,11 +17,11 @@ export const SignupForm = () => {
     });
 
     const handleSubmit = async (event: any) => {
-        event.preventDefault()
         event.preventDefault();
-        const { name, value } = event.target
+        const { name, value } = event.target;
         setInputs((prevState) => ({...prevState, [name]: value}));
-        console.log("Signing up...")
+        console.log("Signing up...");
+        router.push("../main/profile");
     }
 
     return (
@@ -33,6 +36,6 @@ export const SignupForm = () => {
             <Button className="bg-white text-black font-semibold text-lg w-40" type="submit">Sign Up</Button>
         </div>
         </form>
-    )
+    );
 
 }

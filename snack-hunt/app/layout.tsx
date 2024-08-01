@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "snackHUNT",
-  description: "Generated using Next.js",
+  description: "Recipe sharing application!",
 };
 
 export default function RootLayout({
