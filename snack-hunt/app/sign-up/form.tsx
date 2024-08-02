@@ -27,6 +27,8 @@ export const SignupForm = () => {
     return (
         <form onSubmit = { handleSubmit }>
         <div className="pt-6 w-96 flex flex-col items-center justify-center gap-4">
+            <Input type="display_name" variant="bordered" label="Display Name" className="w-96"/>
+            <br/>
             <Input isRequired type="username" variant="bordered" label="Username" className="w-96"/>
             <br/>
             <Input isRequired type="email" variant="bordered" label="Email" className="w-96"/>
